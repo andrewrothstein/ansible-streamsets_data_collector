@@ -1,0 +1,16 @@
+---
+# defaults file for streamsets_data_collector
+streamsets_data_collector_ver: '3.9.1'
+streamsets_data_collector_mirror: https://archives.streamsets.com/datacollector
+streamsets_data_collector_dl_dir: /tmp
+
+streamsets_data_collector_tarballtype: core
+
+streamsets_data_collector_checksums:
+  '3.9.1':
+    # https://archives.streamsets.com/datacollector/3.9.1/tarball/streamsets-datacollector-all-3.9.1.tgz.sha1
+    all: sha1:9709ebf8d4f37387aa141ce8168135202faa3b80
+    # https://archives.streamsets.com/datacollector/3.9.1/tarball/streamsets-datacollector-core-3.9.1.tgz.sha1
+    core: sha1:6c9e45d7f0c8d71f86dc6b7b3574115a70d29417
+
+streamsets_data_collector_parent_install_dir: /usr/local

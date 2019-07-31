@@ -1,0 +1,57 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: look for install
+  become: yes
+  stat:
+    path: '{{ streamsets_data_collector_install_dir }}'
+  changed_when: false
+  register: streamsets_data_collector_binary
+- when: not streamsets_data_collector_binary.stat.exists
+  block:
+    - name: download tgz
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ streamsets_data_collector_url }}'
+        dest: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
+        mode: 0644
+    - name: unarchive
+      become: yes
+      become_user: root
+      unarchive:
+        src: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
+        dest: '{{ streamsets_data_collector_parent_install_dir }}'
+        creates: '{{ streamsets_data_collector_install_dir }}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
+        state: absent
+- name: link
+  become: yes
+  become_user: root
+  file:
+    src: '{{ streamsets_data_collector_install_dir }}'
+    dest: '{{ streamsets_data_collector_link }}'
+    state: link
+- name: add to default shell
+  become: yes
+  become_user: root
+  with_items:
+    - f: streamsets_data_collector.sh
+      d: /etc/profile.d
+  template:
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m | default("0644") }}'

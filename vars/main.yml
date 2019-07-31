@@ -1,0 +1,8 @@
+---
+# vars file for streamsets_data_collector
+streamsets_data_collector_name: streamsets-datacollector-{{ streamsets_data_collector_ver }}
+streamsets_data_collector_tgz: streamsets-datacollector-{{streamsets_data_collector_tarballtype }}-{{ streamsets_data_collector_ver }}.tgz
+streamsets_data_collector_url: '{{ streamsets_data_collector_mirror }}/{{ streamsets_data_collector_ver }}/tarball/{{ streamsets_data_collector_tgz }}'
+streamsets_data_collector_checksum: '{{ streamsets_data_collector_checksums[streamsets_data_collector_ver] }}'
+streamsets_data_collector_install_dir: '{{ streamsets_data_collector_parent_install_dir }}/{{ streamsets_data_collector_name }}'
+streamsets_data_collector_link: '{{ streamsets_data_collector_parent_install_dir }}/streamsets-datacollector'
