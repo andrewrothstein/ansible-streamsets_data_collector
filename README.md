@@ -1,8 +1,10 @@
-andrewrothstein.rolename
+andrewrothstein.streamsets_data_collector
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-rolename.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-rolename)
 
-A brief description of the andrewrothstein.rolename goes here.
+![Build Status](https://github.com/andrewrothstein/ansible-streamsets_data_collector/actions/workflows/build.yml/badge.svg)
+
+
+Installs the StreamSets Data Collector.
 
 Requirements
 ------------
@@ -25,7 +27,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.rolename
+    - andrewrothstein.streamsets_data_collector
 ```
 
 License

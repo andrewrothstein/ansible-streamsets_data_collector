@@ -1,9 +1,10 @@
 ---
 # defaults file for streamsets_data_collector
-streamsets_data_collector_ver: '3.9.1'
+streamsets_data_collector_ver: 3.22.3
 streamsets_data_collector_mirror: https://archives.streamsets.com/datacollector
 streamsets_data_collector_dl_dir: /tmp
 
+streamsets_data_collector_parent_install_dir: /usr/local
 streamsets_data_collector_tarballtype: core
 
 streamsets_data_collector_checksums:
@@ -12,5 +13,113 @@ streamsets_data_collector_checksums:
     all: sha1:9709ebf8d4f37387aa141ce8168135202faa3b80
     # https://archives.streamsets.com/datacollector/3.9.1/tarball/streamsets-datacollector-core-3.9.1.tgz.sha1
     core: sha1:6c9e45d7f0c8d71f86dc6b7b3574115a70d29417
-
-streamsets_data_collector_parent_install_dir: /usr/local
+  '3.10.0':
+    # https://archives.streamsets.com/datacollector/3.10.0/tarball/streamsets-datacollector-all-3.10.0.tgz.sha1
+    all: sha1:e70e655257c028d6e85b3fd045104a76fdf11569
+    # https://archives.streamsets.com/datacollector/3.10.0/tarball/streamsets-datacollector-core-3.10.0.tgz.sha1
+    core: sha1:55b5c233592030a88fb05d2f9b372b40d4445ebc
+  '3.10.1':
+    # https://archives.streamsets.com/datacollector/3.10.1/tarball/streamsets-datacollector-all-3.10.1.tgz.sha1
+    all: sha1:9f5534aaea88b9977dc3ac5a24d0dba98c690999
+    # https://archives.streamsets.com/datacollector/3.10.1/tarball/streamsets-datacollector-core-3.10.1.tgz.sha1
+    core: sha1:df8ce9626369845dd3c3bbe1ac858ba0535c5f8a
+  '3.11.0':
+    # https://archives.streamsets.com/datacollector/3.11.0/tarball/streamsets-datacollector-all-3.11.0.tgz.sha1
+    all: sha1:900627c3c325460c310c473dcb39599ec4cb60c1
+    # https://archives.streamsets.com/datacollector/3.11.0/tarball/streamsets-datacollector-core-3.11.0.tgz.sha1
+    core: sha1:0b84317afaa28c4b0b21a23b300e9930f7dad554
+  '3.12.0':
+    # https://archives.streamsets.com/datacollector/3.12.0/tarball/streamsets-datacollector-all-3.12.0.tgz.sha1
+    all: sha1:fdcf42ad6e5f35997faa11f6d075041bee6a369e
+    # https://archives.streamsets.com/datacollector/3.12.0/tarball/streamsets-datacollector-core-3.12.0.tgz.sha1
+    core: sha1:7fad852a02fb2a38c6e31d6aaa1409e52528c207
+  '3.13.0':
+    # https://archives.streamsets.com/datacollector/3.13.0/tarball/streamsets-datacollector-all-3.13.0.tgz.sha1
+    all: sha1:7ac8bd764ef13bb5fed75d27a6d05ab220ba2497
+    # https://archives.streamsets.com/datacollector/3.13.0/tarball/streamsets-datacollector-core-3.13.0.tgz.sha1
+    core: sha1:156e93f17b942f7996540f693095a160c7dd342a
+  '3.14.0':
+    # https://archives.streamsets.com/datacollector/3.14.0/tarball/streamsets-datacollector-all-3.14.0.tgz.sha1
+    all: sha1:6999c135c32496524401fe32ad64ec1352938ecc
+    # https://archives.streamsets.com/datacollector/3.14.0/tarball/streamsets-datacollector-core-3.14.0.tgz.sha1
+    core: sha1:4e4692f908751f13d64d1f224cc74d20ed890509
+  '3.15.0':
+    # https://archives.streamsets.com/datacollector/3.15.0/tarball/streamsets-datacollector-all-3.15.0.tgz.sha1
+    all: sha1:518abfe3fe5889580b86be38b09d97645758ce27
+    # https://archives.streamsets.com/datacollector/3.15.0/tarball/streamsets-datacollector-core-3.15.0.tgz.sha1
+    core: sha1:8003fcfe34dc224be816921e9543fa58ba195653
+  '3.16.0':
+    # https://archives.streamsets.com/datacollector/3.16.0/tarball/streamsets-datacollector-all-3.16.0.tgz.sha1
+    all: sha1:99f4acfc33320f95b347575619f4af16de0af8df
+    # https://archives.streamsets.com/datacollector/3.16.0/tarball/streamsets-datacollector-core-3.16.0.tgz.sha1
+    core: sha1:7c4444734beda4624626d23d4f051b0f7fb83088
+  '3.16.1':
+    # https://archives.streamsets.com/datacollector/3.16.1/tarball/streamsets-datacollector-all-3.16.1.tgz.sha1
+    all: sha1:79c66f5754570f91986ff600350326a7c181efd2
+    # https://archives.streamsets.com/datacollector/3.16.1/tarball/streamsets-datacollector-core-3.16.1.tgz.sha1
+    core: sha1:141b675d84e528a6b730dfcf5c3660d7761f0587
+  '3.16.2':
+    # https://archives.streamsets.com/datacollector/3.16.2/tarball/streamsets-datacollector-all-3.16.2.tgz.sha1
+    all: sha1:997d42d7b9cea3814fbce8e630a11574446a2c58
+    # https://archives.streamsets.com/datacollector/3.16.2/tarball/streamsets-datacollector-core-3.16.2.tgz.sha1
+    core: sha1:bd9953e7760aa455b2641fb79c00aacdaa3fea3a
+  '3.17.0':
+    # https://archives.streamsets.com/datacollector/3.17.0/tarball/streamsets-datacollector-all-3.17.0.tgz.sha1
+    all: sha1:448827da48d9f36486451e9649241fffa4904c3c
+    # https://archives.streamsets.com/datacollector/3.17.0/tarball/streamsets-datacollector-core-3.17.0.tgz.sha1
+    core: sha1:3bc6bbfded5652ef45a6281fccef432366662425
+  '3.17.1':
+    # https://archives.streamsets.com/datacollector/3.17.1/tarball/streamsets-datacollector-all-3.17.1.tgz.sha1
+    all: sha1:715506369dbef3f896088728ac4e7c37473e202e
+    # https://archives.streamsets.com/datacollector/3.17.1/tarball/streamsets-datacollector-core-3.17.1.tgz.sha1
+    core: sha1:08e42374e1e69d24862b9ea5c2a02e4573dd2180
+  '3.18.0':
+    # https://archives.streamsets.com/datacollector/3.18.0/tarball/streamsets-datacollector-all-3.18.0.tgz.sha1
+    all: sha1:f7c57c4a9dc154f321e3ea8547cbd5164db6a661
+    # https://archives.streamsets.com/datacollector/3.18.0/tarball/streamsets-datacollector-core-3.18.0.tgz.sha1
+    core: sha1:869403bce3983b9e51d656e6539d0c2f4965c33c
+  '3.18.1':
+    # https://archives.streamsets.com/datacollector/3.18.1/tarball/streamsets-datacollector-all-3.18.1.tgz.sha1
+    all: sha1:4c8e79d8d82297afabd8367b81d9e6e65e4b8206
+    # https://archives.streamsets.com/datacollector/3.18.1/tarball/streamsets-datacollector-core-3.18.1.tgz.sha1
+    core: sha1:d8e42f7a7b85ad72ba27117d1f13a790228f1369
+  '3.19.0':
+    # https://archives.streamsets.com/datacollector/3.19.0/tarball/streamsets-datacollector-all-3.19.0.tgz.sha1
+    all: sha1:445ba8b8deffffb0c74f6721c80028b41b90f927
+    # https://archives.streamsets.com/datacollector/3.19.0/tarball/streamsets-datacollector-core-3.19.0.tgz.sha1
+    core: sha1:96ae3b5ee438028f95f041540a8f11f08be07cd0
+  '3.19.1':
+    # https://archives.streamsets.com/datacollector/3.19.1/tarball/streamsets-datacollector-all-3.19.1.tgz.sha1
+    all: sha1:b5381839a94d3f8fcd1dd6bc0b9d068eba2742f0
+    # https://archives.streamsets.com/datacollector/3.19.1/tarball/streamsets-datacollector-core-3.19.1.tgz.sha1
+    core: sha1:a916602cf051411f8d8e10e05b90b7daebd1551e
+  '3.20.0':
+    # https://archives.streamsets.com/datacollector/3.20.0/tarball/streamsets-datacollector-all-3.20.0.tgz.sha1
+    all: sha1:ca9725c1ed5ef78ae6ce716bbba791f9cc265fb7
+    # https://archives.streamsets.com/datacollector/3.20.0/tarball/streamsets-datacollector-core-3.20.0.tgz.sha1
+    core: sha1:301e0d3e3e28799062c70df8a7925795c6932b51
+  '3.21.0':
+    # https://archives.streamsets.com/datacollector/3.21.0/tarball/streamsets-datacollector-all-3.21.0.tgz.sha1
+    all: sha1:e88825f7699e69cc27172287a0f3d9afc86b488e
+    # https://archives.streamsets.com/datacollector/3.21.0/tarball/streamsets-datacollector-core-3.21.0.tgz.sha1
+    core: sha1:7fdb759eacc16ab2ef7a6a298921e0dd35bcae47
+  '3.22.0':
+    # https://archives.streamsets.com/datacollector/3.22.0/tarball/streamsets-datacollector-all-3.22.0.tgz.sha1
+    all: sha1:3e3160d76fe19271bb5d26d4bb1455322ffd3e03
+    # https://archives.streamsets.com/datacollector/3.22.0/tarball/streamsets-datacollector-core-3.22.0.tgz.sha1
+    core: sha1:b36c4681004430ccd46fb7464f11e8eb7e5d71b4
+  '3.22.1':
+    # https://archives.streamsets.com/datacollector/3.22.1/tarball/streamsets-datacollector-all-3.22.1.tgz.sha1
+    all: sha1:38ca681dbd8c2215209ea14666134f6d243c27d7
+    # https://archives.streamsets.com/datacollector/3.22.1/tarball/streamsets-datacollector-core-3.22.1.tgz.sha1
+    core: sha1:385464974b7f9502fd9ee319ff4f21a978930295
+  '3.22.2':
+    # https://archives.streamsets.com/datacollector/3.22.2/tarball/streamsets-datacollector-all-3.22.2.tgz.sha1
+    all: sha1:1d7f4858af5b840958e6962b5c7297a1a64d20c8
+    # https://archives.streamsets.com/datacollector/3.22.2/tarball/streamsets-datacollector-core-3.22.2.tgz.sha1
+    core: sha1:5f32f2943a52d0441570499364468bb23e3d1e5d
+  '3.22.3':
+    # https://archives.streamsets.com/datacollector/3.22.3/tarball/streamsets-datacollector-all-3.22.3.tgz.sha1
+    all: sha1:4b94ed5cc470283432b4cfc51b7e3b169158f7dc
+    # https://archives.streamsets.com/datacollector/3.22.3/tarball/streamsets-datacollector-core-3.22.3.tgz.sha1
+    core: sha1:6c5a40cd111ff2e5c36cbb9cc4b09f09f964f3bb

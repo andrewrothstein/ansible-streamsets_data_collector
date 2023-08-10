@@ -1,20 +1,22 @@
 #!/usr/bin/env sh
-VER=3.9.1
+MIRROR=https://archives.streamsets.com/datacollector
 DIR=~/Downloads
 
 dl() {
-    TGZTY=$1
-    TGZ=streamsets-datacollector-${TGZTY}-${VER}.tgz
-    SHA1=${TGZ}.sha1
-    MIRROR=https://archives.streamsets.com/datacollector
-    URL=${MIRROR}/${VER}/tarball/$SHA1
+    ver=$1
+    tgz_ty=$2
+    tgz_sha1="streamsets-datacollector-${tgz_ty}-${ver}.tgz.sha1"
+    url="${MIRROR}/${ver}/tarball/${tgz_sha1}"
 
-    printf "    # %s\n" $URL
-    printf "    %s: sha1:%s\n" $TGZTY `curl -sSL $URL | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s: sha1:%s\n" $tgz_ty $(curl -sSLf $url | awk '{print $1}')
 }
 
-printf "  '%s':\n" $VER
-dl all
-dl core
+dlver() {
+    ver=$1
+    printf "  '%s':\n" $ver
+    dl $ver all
+    dl $ver core
+}
 
-
+dlver ${1:-3.10.1}

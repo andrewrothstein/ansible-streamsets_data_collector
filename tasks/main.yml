@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchivedeps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -10,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: look for install
-  become: yes
+  become: true
   stat:
     path: '{{ streamsets_data_collector_install_dir }}'
   changed_when: false
@@ -18,14 +20,14 @@
 - when: not streamsets_data_collector_binary.stat.exists
   block:
     - name: download tgz
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ streamsets_data_collector_url }}'
         dest: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
         mode: 0644
     - name: unarchive
-      become: yes
+      become: true
       become_user: root
       unarchive:
         src: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
@@ -33,20 +35,20 @@
         creates: '{{ streamsets_data_collector_install_dir }}'
   always:
     - name: cleanup
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ streamsets_data_collector_dl_dir }}/{{ streamsets_data_collector_tgz }}'
         state: absent
 - name: link
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ streamsets_data_collector_install_dir }}'
     dest: '{{ streamsets_data_collector_link }}'
     state: link
 - name: add to default shell
-  become: yes
+  become: true
   become_user: root
   with_items:
     - f: streamsets_data_collector.sh
